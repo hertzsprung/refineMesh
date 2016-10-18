@@ -3,3 +3,4 @@ constant/polyMesh/faces
 constant/polyMesh/neighbour
 constant/polyMesh/owner
 constant/polyMesh/points
+constant/polyMesh/sets

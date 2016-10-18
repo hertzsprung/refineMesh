@@ -1,4 +1,3 @@
-// dummy file to placate paraView
 FoamFile {
     version     2.0;
     format      ascii;
@@ -7,18 +6,10 @@ FoamFile {
     object      fvSchemes;
 }
 
+#include "commonFvSchemes"
+
 divSchemes {
-    default         Gauss linear;
-}
-
-gradSchemes {
-    default         Gauss linear;
-}
-
-laplacianSchemes {
-    default         Gauss linear corrected;
-}
-
-ddtSchemes {
-    default         backward;
+    default         none;
+    div(phi,T)      Gauss linearUpwind grad(T);
+    div(phi,T_0)    Gauss linearUpwind grad(T_0);
 }
