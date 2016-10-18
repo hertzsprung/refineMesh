@@ -4,3 +4,4 @@ constant/polyMesh/neighbour
 constant/polyMesh/owner
 constant/polyMesh/points
 constant/polyMesh/sets
+[0-9]*
