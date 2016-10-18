@@ -10,6 +10,8 @@ FoamFile {
 
 divSchemes {
     default         none;
-    div(phi,T)      Gauss linearUpwind grad(T);
-    div(phi,T_0)    Gauss linearUpwind grad(T_0);
+//    div(phi,T)      Gauss linearUpwind grad(T);
+//    div(phi,T_0)    Gauss linearUpwind grad(T_0);
+    div(phi,T)      Gauss cubicUpwindCPCFit 3;
+    div(phi,T_0)    Gauss cubicUpwindCPCFit 3;
 }
